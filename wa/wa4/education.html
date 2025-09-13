@@ -7,18 +7,21 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Geologica&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Geologica&family=Gloock&display=swap" rel="stylesheet">
 
     <style>
         /* all font should be in Abril Fatface unless otherwise styled */
         html {
-            font-family: "Abril Fatface", serif;
+            font-family: "Gloock", serif;
             font-weight: 400;
             font-style: normal;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFDF7;
         }
 
         /* on this page, all p tags will be in geologica font and any element with the geologica-font class */
-        .geologica-font, p {
+        .geologica-font, p, li {
             font-family: "Geologica", sans-serif;
             font-weight: 400;
             font-style: normal;
@@ -28,10 +31,29 @@
                 "SHRP" 0;
         }
 
+        .gloock-font {
+            font-family: "Gloock", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
         /* styling for the color boxes */
+        .flex-space {
+            padding: 24px 50px 24px 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color:#0A2342;
+        }
+
         .flex {
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .main-content {
+            padding: 0 5% 0 5%;
         }
 
         .color-box {
@@ -87,10 +109,17 @@
             font-size: 40px;
         }
 
+        .name-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         /* link styling */
         a {
             text-decoration: none;
-            color: #F46197;
+            color: #FFFDF7;
+            font-size: 16px;
         }
 
         a:hover {
@@ -98,9 +127,14 @@
             color:#2CA58D;
         }
 
-        a:visited {
+        /* img {
+            border-radius: 16px;
+            box-shadow: 6px 8px 8px black;
+        } */
+
+        /* a:visited {
             color: #A44A3F;
-        }
+        } */
 
         /* button styling */
         button {
@@ -123,57 +157,131 @@
         .margin-12 {
             margin-right: 12px;
             margin-bottom: 12px;
+            padding: 0;
         }
 
         .margin-40 {
             margin-top: 40px;
         }
 
+        .img-background {
+            display: flex;
+            flex-direction: row;
+            height: fit-content;
+            width: fit-content;
+            padding: 32px;
+            background-color: #F46197;
+            border-radius: 16px;
+        }
+
+        main {
+            margin: 0px 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-text {
+            margin: 0 0 0 24px;
+        }
+
+        section {
+            background-color: #2CA58D;
+            color: black;
+            width: 50%;
+        }
+
+        section, .rectangle-container {
+            height: fit-content;
+            padding: 24px;
+            border-radius: 16px;
+            margin: 16px;
+            min-height: 45vh;
+        }
+
+        .rectangle-container {
+            background-color: #FFFDF7;
+        }
+
+        /* section {
+            height: fit-content;
+            width: 90%;
+            padding: 24px;
+            background-color: #A44A3F;
+            color: #FFFDF7;
+            border-radius: 16px;
+            margin: 16px; */
+        /* } */
+
+        #p2p-logo {
+            width: 20%;
+            margin-top: 24px;
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #cu-logo {
+            width: 20%;
+            height: 20%;
+        }
+
     </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="./home.html" tabindex="1">Home</a></li>
-            <li><a href="./education.html" tabindex="2">Education</a></li>
-            <li><a href="./employment.html" tabindex="3">Employment</a></li>
-            <li><a href="./contact.html" tabindex="4">Contact Me</a></li>
-        </ul>
+    <nav class="flex-space">
+        <div><a href="./home.html" tabindex="1">Home</a></div>
+        <div><a href="./education.html" tabindex="2">Education</a></div>
+        <div><a href="./employment.html" tabindex="3">Employment</a></div>
+        <div><a href="./contact.html" tabindex="4">Contact Me</a></div>
     </nav>
 
     <main>
         <article>
             <header tabindex="5">
-                <h1>Linh Tran</h1>
                 <h2>Education</h2>
             </header>
-            <section tabindex="6">
-                <h3>University of Colorado Boulder</h3>
-                <ul>
-                    <li>Bachelor of Science in Computer Science (Aug 2022 – Present)
-                    <li>Minor in Computer Engineering and Creative Technology & Design</li>
-                    <li>CU Esteemed Scholars – Sewall</li>
-                    <li>Relevant Coursework: Software Development, Data Structures, Embedded Software, Algorithms, 
-                        Computer Systems, Digital Logic, Cybersecurity, Data Science, Linear Algebra
-                    </li>
-                    <li>Skills: C, C++, Python, Java, JavaScript, SQL, Angular framework, Jasmine testing framework, 
-                        HTML, CSS, Object-Oriented Programming, Git/GitHub, Docker, Linux, Microsoft Office
-                    </li>
-                </ul>
-            </section>
-            <section tabindex="7">
-                <h3>Peak to Peak Charter School</h3>
-                <ul>
-                    <li>Peak Scholar with Distinction</li>
-                    <li>Summa Cum Laude</li>
-                    <li>Dean's List each year</li>
-                    <li>Outstanding Character Award</li>
-                    <li>Colorado Seal of Biliteracy</li>
-                    <li>Clubs: Speech and Debate (Captain), French Honor Society (President), National Honor Society,
-                        Science National Honor Society, Asian Student Union
-                    </li>
-                </ul>
-            </section>
+            <div class="flex main-content">
+                <section tabindex="6">
+                    <div class="rectangle-container">
+                        <div class="flex">
+                            <h3>University of Colorado Boulder</h3>
+                             <img src="./culogo.png" alt="University of Colorado Boulder Logo" id="cu-logo">
+                        </div>
+                        <ul>
+                            <li>Bachelor of Science in Computer Science (Aug 2022 – Present)
+                            <li>Minor in Computer Engineering and Creative Technology & Design</li>
+                            <li>CU Esteemed Scholars – Sewall</li>
+                            <li>Relevant Coursework: Software Development, Data Structures, Embedded Software, Algorithms, 
+                                Computer Systems, Digital Logic, Cybersecurity, Data Science, Linear Algebra
+                            </li>
+                            <li>Skills: C, C++, Python, Java, JavaScript, SQL, Angular framework, Jasmine testing framework, 
+                                HTML, CSS, Object-Oriented Programming, Git/GitHub, Docker, Linux, Microsoft Office
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section tabindex="7">
+                    <div class="rectangle-container">
+                        <h3>Peak to Peak Charter School</h3>
+                        <ul>
+                            <li>Peak Scholar with Distinction</li>
+                            <li>Summa Cum Laude</li>
+                            <li>Dean's List each year</li>
+                            <li>Outstanding Character Award</li>
+                            <li>Colorado Seal of Biliteracy</li>
+                            <li>Clubs: Speech and Debate (Captain), French Honor Society (President), National Honor Society,
+                                Science National Honor Society, Asian Student Union
+                            </li>
+                        </ul>
+                        <div class="logo-container">
+                            <img src="./p2plogo.png" alt="Peak to Peak Charter School Logo" id="p2p-logo"> 
+                        </div>
+                </section>
+            </div>
         </article>
     </main>
 </body>
