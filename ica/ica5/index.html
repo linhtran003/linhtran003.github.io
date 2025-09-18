@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linh Tran - ICA5</title>
+
+    <link href="./ica5.css" rel="stylesheet">
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <h3>Community Garden Project</h3>
+            <button class="expand-btn" aria-label="Expand card">+</button>
+        </div>
+        <div class="card-content">
+            <p class="summary">Join neighbors in creating a shared growing space...</p>
+            <div class="details hidden">
+            <p>Meeting every Saturday at 10am. Tools provided. All skill levels welcome.</p>
+            <p>Contact: garden@community.org</p>
+            </div>
+        </div>
+        <section>
+            <h3>Post-Activity Reflection</h3>
+            <p>The flexbox layout supports different users through its ability to be displayed on desktop or mobile
+                fairly easily, adjusting for the dimension of the viewing window. For users having to actively click to
+                reveal information, this means that mobile users may benefit more from this feature. Some mobile users might
+                not want to be bombarded with lots of information as soon as they open the site, and only expand sections
+                that are relevant to them. For users accessing the site on their computer, they might prefer to see all
+                information all at once since they have the screen space for it.
+            </p>
+            <p>The act of hiding and revealing content allows more user autonomy or designer control based on the scenario.
+                For example, a designer could be purposefully hiding content from users or making it more difficult to access,
+                in which it would be more in the designer's control. Another example or view is that users have the ability to
+                customize" their own experience on the site by choosing what content to view and when - they are in control
+                of their journey through the site. This subject is a double-edged sword in that way. Features like this
+                exclude people from a site or allow users more control over the content that they see, reducing their
+                cognitive load. 
+            </p>
+        </section>
+    </div>
+    <script>
+        let info = false;
+        const expandBtn = document.querySelector('.expand-btn');
+        const details = document.querySelector('.card-content');
+
+        expandBtn.addEventListener('click', showInfo);
+        // expandBtn.addEventListener('click', changeLabels);
+
+        function showInfo() {
+            if (info == false) {
+                details.style.display = 'flex';
+                info = true;
+                expandBtn.setAttribute('aria-label', 'Collapse card');
+                expandBtn.innerHTML = '-';
+            }
+            else {
+                details.style.display = 'none';
+                info = false;
+                expandBtn.setAttribute('aria-label', 'Expand card');
+                expandBtn.innerHTML = '+';
+            }
+        }
+    </script>
+</body>
+</html>
