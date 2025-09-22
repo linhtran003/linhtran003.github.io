@@ -1,0 +1,75 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #F77481;
+}
+
+/* Make it a flex container
+Space items appropriately with gap
+Style links with padding and hover states
+Hide hamburger button on desktop (display: none) */
+.nav-menu {
+    display: flex;
+    gap: 2vw;
+
+    a {
+        padding: 0 1rem;
+    }
+
+    a:hover {
+        color: white;
+    }
+}
+
+.nav-toggle {
+    display: none;
+    /* height: fit-content;
+    width: fit-content; */
+    height: 44px;
+    width: 44px;
+    cursor: pointer;
+}
+
+.nav-toggle:hover {
+    background-color: #FADADD;
+}
+
+.nav-toggle:focus {
+    background-color: #FADADD;
+}
+
+span {
+    display: flex;
+    background-color: black;
+    width: 28px;
+    height: 3px;
+    margin: 5px 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-menu.show {
+        display: flex;
+        position: absolute;
+        right: 0px;
+        top: 57px;
+        flex-direction: column;
+        align-items: flex-end;
+        background-color: #FADADD;
+        padding: 1rem;
+    }
+
+    .nav-toggle {
+        display: flex;
+        flex-direction: column;
+        padding: none;
+    }
+}
