@@ -46,6 +46,46 @@ function filterSubjects(category) {
   });
 }
 
+const form = document.querySelector('.find-tutor-form');
+const eraseUserDataButton = document.getElementById('erase-user-data');
+
+// save userData to local storage
+if (form) {
+  form.addEventListener('submit', (event) => {
+    console.log('the form has beeen submitted')
+    event.preventDefault()
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const zipcode = document.getElementById('zipcode').value;
+
+    const userData = {name, phone, email, zipcode};
+    localStorage.setItem('userData', JSON.stringify(userData));
+    updateWelcome();
+  });
+}
+// erase userData if button is clicked
+if (eraseUserDataButton) {
+  eraseUserDataButton.addEventListener('click', () => {
+    localStorage.removeItem('userData');
+    updateWelcome();
+  });
+}
+
+// function runs every time form is submitted, page loads, or userData is cleared
+function updateWelcome() {
+  const welcome = document.getElementById('welcome');
+  const userDataString = localStorage.getItem('userData');
+
+  if (welcome && userDataString) {
+    const userData = JSON.parse(userDataString);
+    welcome.textContent = `Welcome, ${userData.name}!`;
+  }
+  else if (welcome) {
+    welcome.textContent = 'Welcome!';
+  }
+}
+
 // query selector for the change mode/theme button
 let themeBtn = document.querySelector('#theme')
 themeBtn.addEventListener('click', setTheme);
@@ -67,8 +107,9 @@ function setTheme() {
   document.body.className = newTheme; // set new theme in the whole document
 }
 
-// Load saved theme on page load
+// Load saved theme and welcome text content on page load
 window.addEventListener('load', function() {
     const savedTheme = localStorage.getItem('userTheme') || 'light';
     document.body.className = savedTheme;
+    updateWelcome();
 });
