@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linh Tran - ICA9</title>
+
+    <style>
+        .box {
+            height: 200px;
+            width: 200px;
+            border: 5px black solid;
+            background-color: red;
+            animation-name: moving-box;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            position: relative;
+        }
+
+        .another-box {
+            height: 200px;
+            width: 200px;
+            border: 5px black solid;
+            background-color: red;
+            transition-property: width;
+            transition-duration: 0.5s;
+        }
+
+        .another-box:hover {
+            width: 500px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .click-me {
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            background-color: rgb(232, 232, 232);
+            box-shadow: none;
+            transition-property: font-size background-color box-shadow;
+            transition-duration: 0.15s;
+        }
+
+        .click-me:hover {
+            cursor: pointer;
+            font-size: 1.25rem;
+            background-color: rgb(174, 208, 244);
+            box-shadow: 3px 3px 10px;
+        }
+
+        @keyframes moving-box {
+            from {
+                left: 0px;
+                top: 0px;
+                background-color: red;
+            }
+
+            25% {
+                left: 500px;
+                top: 0px;
+                background-color: pink;
+            }
+
+            50% {
+                left: 500px;
+                top: 500px;
+                background-color: green;
+            }
+
+            75% {
+                left: 0px;
+                top: 500px;
+                background-color: blueviolet;
+            }
+
+            to {
+                left: 0px;
+                top: 0px;
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Micro-Interaction We Did in Class</h1>
+    <div class="another-box">
+    </div>
+
+    <div class="button-container">
+        <h1>Micro-Interaction I Did Myself</h1>
+        <button class="click-me">Click Me!</button>
+    </div>
+</body>
+</html>
