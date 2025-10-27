@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linh Tran WA10</title>
     <link rel="stylesheet" href="wa10.css">
+    <link rel="stylesheet" href="https://use.typekit.net/adi8ykx.css">
 </head>
 <body>
     <div class="app">
@@ -18,14 +19,14 @@
           <h3>Choose a Joke Category</h3>
           <form class="choice-form">
            <select id="endpoint-select">
-            <option value="any">Any</option>
-            <option value="programming">Programming</option>
-            <option value="misc">Miscellaneous</option>
-            <option value="dark">Dark</option>
-            <option value="pun">Pun</option>
-            <option value="spooky">Spooky</option>
-            <option value="christmas">Christmas</option>
-          </select>
+              <option value="any">Any</option>
+              <option value="programming">Programming</option>
+              <option value="misc">Miscellaneous</option>
+              <option value="dark">Dark</option>
+              <option value="pun">Pun</option>
+              <option value="spooky">Spooky</option>
+              <option value="christmas">Christmas</option>
+            </select>
           </form>
           <button type="button" id="js-new-quote" class="new-quote button">
             Generate a new joke!
@@ -35,6 +36,18 @@
           </button>
           <!-- <a class="answer button" id="js-tweet" target="_blank" rel="noreferrer">Show me the answer!</a> -->
         </section>
+        <div class="responses">
+          <p>My extension was to allow the user to choose what joke category they wanted. I did this by creating a new form with a select that 
+            has all the endpoint options that I provide from my chosen API. Then in JS, I had a map of the endpoint labels and the actual API endpoint
+            and I made it so there is a const that corresponds to the select tag I created in HTML, and finding the value of that select and grabbing the
+            API endpoint from the map is the endpoint that I actually access for the joke.
+          </p>
+          <p>
+            I'd want to use YouTube's API so that I could access videos and channels on YouTube and their metadata. I would use endpoints that find the
+            number of views for a video, the number of subscribers to a channel, the genre/topic/tags that the video is under, and more. I would use this
+            information to find videos to display to a user while the user is watching their current video. 
+          </p>
+        </div>
       </div>
       <script src="wa10.js"></script>
 </body>
