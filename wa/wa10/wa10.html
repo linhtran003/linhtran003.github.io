@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linh Tran WA10</title>
+    <link rel="stylesheet" href="wa10.css">
+</head>
+<body>
+    <div class="app">
+        <header>Random Jokes</header>
+        <section class="quotes">
+          <div class="quote-text" id="js-quote-text"></div>
+          <div class="quote-text" id="js-answer-text"></div>
+        </section>
+        <section class="controls" >
+          <h3>Choose a Joke Category</h3>
+          <form class="choice-form">
+           <select id="endpoint-select">
+            <option value="any">Any</option>
+            <option value="programming">Programming</option>
+            <option value="misc">Miscellaneous</option>
+            <option value="dark">Dark</option>
+            <option value="pun">Pun</option>
+            <option value="spooky">Spooky</option>
+            <option value="christmas">Christmas</option>
+          </select>
+          </form>
+          <button type="button" id="js-new-quote" class="new-quote button">
+            Generate a new joke!
+          </button>
+          <button type="button" id="js-tweet" class="twitter button">
+            Show me the punchline!
+          </button>
+          <!-- <a class="answer button" id="js-tweet" target="_blank" rel="noreferrer">Show me the answer!</a> -->
+        </section>
+      </div>
+      <script src="wa10.js"></script>
+</body>
+</html>
