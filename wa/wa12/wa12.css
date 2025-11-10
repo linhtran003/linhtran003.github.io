@@ -1,0 +1,201 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+
+  .search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  img {
+    max-height: 445px;
+  }
+
+  .responses {
+    padding: 20px;
+  }
+
+  .choice-form {
+    margin-bottom: 10px;
+  }
+
+  input {
+    width: 50%;
+  }
+
+  button {
+    background-color: #0066DD;
+    color: white;
+  }
+
+  input, button {
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-width: 1px;
+    cursor: pointer;
+  }
+  
+  header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
+    border: none;
+    margin: 1rem 0;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  #view-favorites {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    cursor: pointer;
+  }
+
+  #view-favorites:hover {
+    color: #0066DD;
+    text-decoration: underline;
+  }
+  
+  .quotes {
+    padding: 20px 50px;
+    min-height: 200px;
+  }
+  
+  .quote-text {
+    padding-bottom: 20px;
+    font-size: 25px;
+    color: black;
+  }
+  
+  .controls {
+    width: 100%;
+    padding: 20px 50px;
+  }
+
+  .info-item {
+    display: flex;
+    align-items: baseline;  /* keeps label and text aligned nicely */
+    gap: 0.5rem;  
+  }
+
+  strong {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  p, input, button, h3 {
+    font-family: "darker-grotesque", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+  }
+
+  button:focus, 
+  a:focus,
+  input:focus,
+  .fav-card-div:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #f5b700;
+  }
+
+  .movie-not-found {
+    display: none;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 2rem;
+    margin: 2rem;
+    background-color: #e9ecef;
+    border-radius: 16px;
+    justify-content: center;
+  }
+
+  .result-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    margin: 0;
+    padding: 0;
+  }
+
+  #favorite {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  header, h2, #favorite {
+    font-family: "waters-titling-semicondensed", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .search-result {
+    display: none;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 2rem;
+    margin: 2rem;
+    background-color: #e9ecef;
+    border-radius: 16px;
+  }
+
+  #title {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+  }
+  
+  #display-favorites {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .fav-section-title {
+    text-align: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .fav-card-div {
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+    gap: 1.25rem;
+    background-color: #e9ecef;
+    padding: 1.5rem;
+    max-width: 330px;
+    border-radius: 24px;
+    text-align: center;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .app {
+      width: 100%;
+    }
+    .quote-text {
+      font-size: 18px;
+    }
+  }

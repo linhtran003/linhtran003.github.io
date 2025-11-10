@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linh Tran WA11</title>
+    <link rel="stylesheet" href="wa12.css">
+    <link rel="stylesheet" href="https://use.typekit.net/adi8ykx.css">
+    <link rel="stylesheet" href="https://use.typekit.net/adi8ykx.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <button id="view-favorites">View Favorites</button>      
+      <h1 id="site-title">Movie Search</h1>
+    </header>
+    <form class="search">
+      <input id='movie-search' class='search-bar' type='text' placeholder='Enter movie title'>
+      <button id="search-btn" type="submit">Search Movie</button>
+    </form>
+    <div class="movie-not-found">
+      <h2>Movie not found in database. Try entering another movie!</h2>
+    </div>
+    <div class="search-result">
+      <img src='#' id="search-result-img" alt="">
+      <div class="text-info">
+        <div class="result-heading">  
+          <h2 id="title"></h2>
+          <button id="favorite">Favorite</button>
+        </div>
+        <p><strong>Plot</strong>: <span id="plot"></span></p>
+        <p><strong>Release</strong>: <span id="release"></span></p>
+        <p><strong>Rated</strong>: <span id="rated"></span></p>
+        <p><strong>Runtime</strong>: <span id="runtime"></span></p>
+        <p><strong>Genre</strong>: <span id="genre"></span></p>
+        <p><strong>Director</strong>: <span id="director"></span></p>
+        <p><strong>Writer</strong>: <span id="writer"></span></p>
+        <p><strong>Actors</strong>: <span id="actors"></span></p>
+      </div>
+    </div>
+    <div id="display-favorites"></div>
+  </div>
+  <script src="wa12.js"></script>
+</body>
+</html>
