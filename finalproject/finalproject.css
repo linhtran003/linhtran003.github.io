@@ -107,9 +107,10 @@ footer {
     border-radius: none;
 }
 
-.flex {
+.flex-row-center {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .main-content {
@@ -303,6 +304,7 @@ button {
     color: black;
     padding: 0.25rem 1rem;
     margin: 0;
+    cursor: pointer;
 }
 
 .active {
@@ -314,6 +316,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 #project-container.list-view .project-item {
@@ -338,8 +341,28 @@ button {
     border-radius: 1rem;
 }
 
+/* #grid-view-wrapper {
+    display: flex;
+    flex-direction: row;
+    dire
+} */
+ 
+#full-project-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+}
+
+#project-container.grid-view {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
 #project-container.grid-view .project-item {
-    width: 300px;
+    width: 25rem;
     border: 1px solid #ccc;
     padding: 16px;
     border-radius: 8px;
@@ -347,6 +370,30 @@ button {
 }
 
 #project-container.grid-view .project-item img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+#project-container.carousel-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#project-container.carousel-view .project-item {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 80%;
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+#project-container.carousel-view .project-item img {
     width: 100%;
     border-radius: 1rem;
 }
