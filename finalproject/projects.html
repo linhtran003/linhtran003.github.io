@@ -17,10 +17,15 @@
 <body>
     <nav class="navbar">
         <div><a href="./home.html" tabindex="0">Linh Tran</a></div>
-        <div class="right-section-nav">
-            <div><a href="./home.html" tabindex="0">Home</a></div>
-            <div><a href="./experience.html" tabindex="0">Experience</a></div>
-            <div><a href="./projects.html" tabindex="0">Projects</a></div>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-menu">
+            <a href="./home.html" tabindex="0">Home</a>
+            <a href="./experience.html" tabindex="0">Experience</a>
+            <a href="./projects.html" tabindex="0">Projects</a>
         </div>
     </nav>
 
@@ -37,52 +42,73 @@
 
         <div id="full-project-wrapper">
             <div id="project-container" class="list-view">
-                <div class="project-item">
-                    <img src="./riscv.jpg" alt="RISC-V Pipeline Project Image">
+                <button id="prev-btn" class="carousel-btn">
+                    <img src="leftarrow.svg" alt="previous slide button">
+                </button>
+
+                <div class="project-item" tabindex="0">
+                    <div class="img-wrapper">
+                        <img src="./riscv.jpg" alt="RISC-V Pipeline Project Image">
+                    </div>
                     <h3>RISC-V 5-Stage Pipeline in Codasip</h3>
-                    <p>Project Description</p>
+                    <p>Used Codasip’s hardware description language to build and simulate a RISC-V 5-stage pipeline, creating both instruction-accurate and cycle-accurate models. The models feature full bypassing and hazard detection, accompanied by detailed schematics of the full pipeline.</p>
+                    <p>Skills: Hardware Description Languages, RISC-V Architecture, Technical Documentation</p>
                 </div>
 
                 <div class="divider"></div>
 
-                <div class="project-item">
-                    <img src="./LookLoomLogo.jpg" alt="RISC-V Pipeline Project Image">
+                <div class="project-item" tabindex="0">
+                    <div class="img-wrapper">
+                        <img src="./LookLoomLogo.jpg" alt="RISC-V Pipeline Project Image">
+                    </div>
                     <h3>LookLoom</h3>
-                    <p>Project Description</p>
+                    <p>Full stack developer on a web application that allows users to organize their wardrobe, create outfits, and share them with friends, using Express.js, HTML, Handlebars.js, JavaScript, and PostgreSQL.</p>
+                    <p>Skills: Full Stack Development, Express.js, JavaScript, PostgreSQL, HTML, CSS, Handlebars.js</p>
                 </div>
 
                 <div class="divider"></div>
 
-                <div class="project-item">
-                    <img src="./connect4.jpg" alt="RISC-V Pipeline Project Image">
+                <div class="project-item" tabindex="0">
+                    <div class="img-wrapper">
+                        <img src="./connect4.jpg" alt="RISC-V Pipeline Project Image">
+                    </div>
                     <h3>Connect 4 Game on STM32 Microcontroller</h3>
-                    <p>Project Description</p>
+                    <p>Built a fully functional Connect 4 game on an STM32 microcontroller using C. Designed the game logic, input handling, LED display output, and user interaction through touchscreen. Features a one-player mode where a player plays against an algorithm that I wrote. Integrated debouncing logic, timing control, and efficient board state updates to ensure smooth gameplay in an embedded environment.</p>
+                    <p>Skills: Embedded Software Development, STM32, C Programming</p>
                 </div>
 
                 <div class="divider"></div>
 
-                <div class="project-item">
-                    <img src="./webots.jpg" alt="RISC-V Pipeline Project Image">
+                <div class="project-item" tabindex="0">
+                    <div class="img-wrapper">
+                        <img src="./webots.jpg" alt="RISC-V Pipeline Project Image">
+                    </div>
                     <h3>Webots Grocery Store Robot</h3>
-                    <p>Project Description</p>
+                    <p>A Webots simulation of a grocery-store robot implemented in Python, featuring A* path planning and autonomous map exploration. The robot builds and updates a map of its environment, navigates through aisles, and handles obstacles in real time. Reverse kinematics is used to calculate arm movements for holding and placing items.</p>
                     <p>Skills: Robotics, Python, A** Algorithm, Map Exploring</p>
                 </div>
 
                 <div class="divider"></div>
 
-                <div class="project-item">
-                    <img src="./dungeonescape.jpg" alt="RISC-V Pipeline Project Image">
+                <div class="project-item" tabindex="0">
+                    <div class="img-wrapper">
+                        <img src="./dungeonescape.jpg" alt="RISC-V Pipeline Project Image">
+                    </div>
                     <h3>C++ Dungeon Escape Game</h3>
                     <p>Developed a roleplaying game in which the player (and their 4 friends) attempt to escape a dungeon using items in inventory, defeating monsters, beating rooms, defeating the sorcerer, and making it to the dungeon's escape.</p>
                     <p>Skills: C++, Object-Oriented Programming</p>
                 </div>
+
+                <button id="next-btn" class="carousel-btn">
+                    <img src="rightarrow.svg" alt="next slide button">
+                </button>
             </div>
         </div>
-    </main>
+    </main>     
     <footer>
         <div class="icon-wrapper" aria-label="email">
             <img src="./mail.svg" alt="mail icon" class="icon">
-            <p>lttran2003@gmail.com</p>
+            <p class="gloock-font">lttran2003@gmail.com</p>
         </div>
         <div class="icon-wrapper" aria-label="linkedin">
             <img src="./linkedin.svg" alt="linkedin icon" class="linkedin-icon">

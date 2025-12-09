@@ -15,40 +15,48 @@
 <body>
     <nav class="navbar">
         <div><a href="./home.html" tabindex="0">Linh Tran</a></div>
-        <div class="right-section-nav">
-            <div><a href="./home.html" tabindex="0">Home</a></div>
-            <div><a href="./experience.html" tabindex="0">Experience</a></div>
-            <div><a href="./projects.html" tabindex="0">Projects</a></div>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-menu">
+            <a href="./home.html" tabindex="0">Home</a>
+            <a href="./experience.html" tabindex="0">Experience</a>
+            <a href="./projects.html" tabindex="0">Projects</a>
         </div>
     </nav>
     <main>
-        <div class="flex main-content">
-            <div class="left-info">
-                <div class="img-background">
-                    <img src="./Tran.Linh.jpg" alt="Profile Picture" style="width: 300px" tabindex="6">
+        <div class="full-wrapper">
+            <div class="main-content">
+                <div class="left-info">
+                    <div class="img-background">
+                        <img id="portrait" src="./Tran.Linh.jpg" alt="Profile Picture" tabindex="0">
+                    </div>
                 </div>
-            </div>
-            <div class="main-text">
-                <section>
-                    <h3 class="margin-12" tabindex="7">Welcome!</h3>
-                    <p tabindex="8">
-                        Hello! I’m Linh. Welcome to my portfolio site! I’m currently a senior majoring in Computer Science and minoring 
-                        in CTD and Computer Engineering. I spend most of my time studying/working and spending time with friends and family.
-                        Feel free to explore this webpage.
-                    </p>
-                </section>
+                <div class="main-text">
+                    <section>
+                        <h1 id="welcome-title" class="margin-16" tabindex="0">Welcome!</h1>
+                        <p tabindex="0">
+                            Hello! I’m Linh. Welcome to my portfolio site! I’m currently a senior majoring in Computer Science and minoring 
+                            in CTD and Computer Engineering. I spend most of my time studying/working and spending time with friends and family.
+                            Feel free to explore this webpage.
+                        </p>
+                    </section>
+                </div>
             </div>
         </div>
     </main>
     <footer>
         <div class="icon-wrapper" aria-label="email">
             <img src="./mail.svg" alt="mail icon" class="icon">
-            <p>lttran2003@gmail.com</p>
+            <p class="gloock-font">lttran2003@gmail.com</p>
         </div>
         <div class="icon-wrapper" aria-label="linkedin">
             <img src="./linkedin.svg" alt="linkedin icon" class="linkedin-icon">
             <a href="www.linkedin.com/in/linhtran03">@linhtran03</a>
         </div>
     </footer>
+    <script src="./finalproject.js"></script>
 </body>
 </html>
