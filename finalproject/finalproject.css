@@ -166,6 +166,11 @@ footer {
     gap: 4rem;
 }
 
+.left-info {
+    width: 60%;
+    height: auto;
+}
+
 .main-text {
     align-self: flex-start;
 }
@@ -408,7 +413,6 @@ button {
     border-radius: 1rem;
     width: 5rem;
     height: 5em;
-    transition: 0.25s ease;
 }
 
 #prev-btn {
@@ -493,6 +497,10 @@ button {
         max-width: 19rem;
     }
 
+    #project-container.grid-view {
+        grid-template-columns: 1fr;
+    }
+
     .carousel-btn {
         width: 3rem;
         padding: 0;
@@ -548,10 +556,6 @@ button {
         width: 100%;
     }
 
-    #grid-ctrl {
-        display: none;
-    }
-
     #project-container.carousel-view .project-item {
         max-width: 19rem;
         height: fit-content;
@@ -559,6 +563,14 @@ button {
 
     #project-container.carousel-view .project-item img {
         max-width: 19rem;
+    }
+
+    #project-container.grid-view {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .project-items {
+        max-width: 100%;
     }
 
     .carousel-btn {
